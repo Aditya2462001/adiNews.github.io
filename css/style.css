@@ -1,0 +1,604 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar
+{
+    width: 8px;
+    background: rgba(155, 154, 154, 0.829);
+    /* border-radius: 10px; */
+
+}
+body::-webkit-scrollbar-thumb
+{
+    background: black;
+    border-radius: 10px;
+
+}
+.navbar
+{
+    width: 100%;
+    height: 50px;
+    /* background: rgb(126, 157, 223); */
+    display: flex;
+    justify-content: space-between;
+}
+.logo
+{
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 10px 20px;
+}
+.logoImg
+{
+    width: 50px;
+    height: 50px;
+    margin: 0px ;
+    background-color: rgb(224, 88, 34);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(180, 97, 97);
+}
+.logoImg img
+{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.logoName
+{
+    margin-left: 10px;
+    font-weight:bold;
+    font-size: 20px;
+    color: white;
+    white-space: nowrap;
+    font-family: 'Yusei Magic', sans-serif;
+
+}
+.logoName a
+{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 0px rgb(245, 151, 28);
+}
+.search
+{
+    width: 40%;
+    margin: 17px;
+    /* margin-left: 50px; */
+    display:flex;
+    justify-content: right;
+    /* background-color: yellow; */
+}
+.search .inputField
+{
+    margin-left: 210px;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    background:rgba(155, 154, 154, 0.295);
+    color: white;
+    border-bottom: 2px solid white;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+.search .inputField:hover
+{
+    border-bottom: 2px solid brown;
+    color: white;
+}
+.search .searchBtn
+{
+    height: 30px;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    background: transparent;
+    border: 2px solid white;
+    font-weight:bold;
+    border-radius: 5px;
+    outline:none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.8s;
+} 
+.search .searchBtn:hover
+{
+    box-shadow: 1px 1px 10px rgba(230, 76, 15, 0.39);
+    border: 2px solid brown;
+    color: brown;
+}
+.bars
+{
+    width: 45px;
+    height: 40px;
+    margin: 5px;
+    margin-right: 30px;
+    /* background-color: aquamarine; */
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.fa-bars
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 12px;
+    color:white;
+    transition: all 0.8s;
+}
+.fa-bars:hover
+{
+    color: brown;
+}
+.links
+{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+.toggle
+{
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+    /* display: none; */
+}
+.header
+{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+.header .fa-times
+{
+    margin-top: 20px;
+    margin-left:15px ;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.8s;
+    /* background: yellow; */
+}
+.fa-times:hover
+{
+    color: aqua;
+}
+.header h3
+{
+    margin: 20px;
+    margin-left: 50px;
+    text-align: center;
+    color: white;
+}
+/* .toggle h3
+{
+    opacity: 0;
+    pointer-events: none;
+    width: 0px;
+    over
+} */
+.links ul
+{
+    width: 100%;
+}
+.links ul li
+{
+    padding: 30px;
+    height: 50px;
+    list-style: none;
+    /* background: green; */
+    margin: 10px;
+}
+.links ul li a
+{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s;
+}
+.links ul li a i
+{
+    padding-right: 1rem;
+}
+.links ul li a:hover
+{
+    padding-left: 5px;
+    color: rgb(37, 199, 177);
+}
+.follow
+{
+    position: absolute;
+    bottom: 20PX;
+}
+.follow h3
+{
+    text-align: center;
+    margin: 1rem;
+}
+.follow .icons
+{
+    display: flex;
+    justify-content: space-between;
+}
+.follow .icons a
+{
+    text-decoration: none;
+    color: white;
+}
+.follow .icons .fa
+{
+    font-size: 1.3rem;
+    transition: all 0.5s;
+}
+.follow .icons .fa:hover
+{
+      color: brown;
+}
+
+/* MAIN PAGE STYLE ---------------------*/
+.container
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -50px;
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../images/img1.jpg');
+    background-size: cover;
+
+}
+.container h1
+{
+    font-weight: bold;
+    height:40px;
+    margin: 30px;
+    margin-top: 5px;
+    font-style: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+    color:white;
+    padding: 10px;
+    /* background: yellow; */
+    white-space: nowrap;
+}
+.container p
+{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    background-color: rgb(224, 114, 24);
+    font-weight: 400;
+}
+.container img
+{
+    width: 300px;
+    height: 300px;
+
+}
+
+.container .pageScroll
+{
+    border:none;
+    height: 40px;
+    background-color: transparent;
+    font-size: 35px;
+    margin-top: 100px;
+    color: brown;
+    cursor: pointer;
+    outline: none;
+    font-size: 50px;
+    transition: all 0.5s;
+    animation: updown 3s ease-in-out infinite ;
+}
+.container .pageScroll:hover
+{
+    color: white;
+}
+@keyframes updown
+{
+    0%
+    {
+        transform:translateY(0px);
+    }
+    50%
+    {
+        transform:translateY(40px);
+    }
+    100%
+    {
+        transform:translateY(0px);
+    }
+}
+.catagiories h1
+{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+
+}
+.catagiories h1::before
+{
+    content: "";
+    position: absolute;
+    top:100%;
+    height: 3px;
+    width: 120px;
+    background-color: black;
+}
+.cataBtns
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px;
+    align-items: center;
+}
+.cataBtns button
+{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    outline: none;
+    height: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.cataBtns button:hover
+{
+   border-top: 2px solid black;
+   border-color: rgb(53, 180, 180);
+   color: rgb(62, 187, 187);
+}
+.topheadline
+{
+    height: 80px;
+    text-align: center;
+}
+.topheadline h2
+{
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.para
+{
+    width: 90%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.para .news
+{
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+    background: rgba(228, 228, 228, 0.527);
+    position: relative;
+    /* justify-content: center; */
+
+}
+.para .news .newsImgContainer
+{
+    width: 160px;
+    height: 160px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: rgba(80, 56, 56, 0.377);
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+   
+}
+.para .news .newsImgContainer img
+{
+    width: 160px;
+    height: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.para .news .newsImgContainer img:hover
+{
+       width: 165px;
+       height:165px;
+
+
+}
+.para .news .contentContainer
+{
+    width: calc(100% - 180px);
+    margin: 20px;
+
+}
+.para .news .contentContainer h2 
+{
+    margin-bottom:20px;
+    font-family: 'Poppins', sans-serif;
+}
+.para .news .contentContainer p
+{
+    font-family: 'Poppins', sans-serif;
+}
+.para .news .contentContainer button
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    /* border:none; */
+    padding: 5px;
+    border: 2px solid #333;
+    transition: all 0.5s;
+}
+.para .news .contentContainer button a
+{
+    text-decoration: none;
+    color:black
+}
+.para .news .contentContainer button:hover  a
+{
+    color: brown;
+}
+/* ------------------topbutton--------------------------- */
+.top
+{
+    position:fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+.top button
+{
+     height: 35px;
+     background: #333;
+     border: 2px solid black;
+     border-radius: 0.5rem;
+     outline: none;
+     cursor: pointer;
+     transition: all 0.5s;
+     width: 35px;
+     opacity: 0.6;
+
+}
+.displayProp
+{
+    transform: scale(0);
+    pointer-events: none;
+}
+.top button:hover i
+{
+    color: white;
+}
+.top button i
+{
+    /* font-weight: 500; */
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.5s;
+}
+/*----------------------------------- footer----------------------------- */
+.footer
+{
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0px -2px 10px rgba(107, 103, 103, 0.377);
+}
+.firstCont
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.follow2
+{
+    width:40%;
+    text-align: center;
+}
+.follow2 .followName2
+{
+    margin: 10px;
+}
+.follow2 .followName2 .namefoll
+{
+    font-family: 'Poppins', sans-serif;
+}
+.follow2 .icons
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.follow2 .icons a
+{
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+}
+.follow2 .icons a i
+{
+    font-size: 30px;
+    transition: all 0.6s;
+}
+.follow2 .icons a i:hover
+{
+    color: brown;
+}
+.about
+{
+    width:40%;
+    text-align: center;
+}
+.about h2
+{
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.about .paragraph
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.about .paragraph p
+{
+    width: 40%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+
+}
+.bottomfooter
+{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.bottomfooter a
+{
+    text-decoration:none;
+    color: rgb(180, 97, 97);
+    cursor: pointer;
+}
+.contact_us
+{
+    width: 20%;
+    margin: 0px 0px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+.contact_us .contact_heading h2
+{
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
