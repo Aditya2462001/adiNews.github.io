@@ -6,7 +6,7 @@ const apiKey = "7c361038835041e2a81616fb35e029a9";
 // const category = "science";
 function data(category)
 {
-xhr.open('GET',`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}`,true) ;
+xhr.open('GET',`//newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}`,true) ;
 
 xhr.onprogress = function ()
 {
@@ -15,7 +15,7 @@ xhr.onprogress = function ()
 
 xhr.onload = function ()
 {
-  if(this.status === 200)
+  if(this.status === 426)
   {
     let json = JSON.parse(this.responseText);
     let articles = json.articles ;
