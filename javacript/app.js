@@ -15,7 +15,7 @@ xhr.onprogress = function ()
 
 xhr.onload = function ()
 {
-  if(this.status === 426)
+  if(this.status === 200)
   {
     let json = JSON.parse(this.responseText);
     let articles = json.articles ;
