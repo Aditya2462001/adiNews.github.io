@@ -135,7 +135,6 @@ pageScr.addEventListener("click",function ()
 
 const pageup = document.querySelector('.downtotop');
 window.onscroll = function() {
-  console.log(document.body.scrollTop);
   if (document.body.scrollTop == 660 || document.body.scrollTop > 660)
   {
     pageup.classList.remove('displayProp');
